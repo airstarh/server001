@@ -1,0 +1,41 @@
+whereis python | tr " " "\n"
+
+chmod -R 777 ~/a001/repo/server002/server/srv/python
+python -m flask run --host=0.0.0.0 --port=44444
+
+##################################################
+python -m venv venv
+source venv/bin/activate
+python -m pip install flask --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+export FLASK_APP=main.py
+python main.py
+### python -m flask run --host=0.0.0.0 --port=44444
+
+
+##################################################
+
+args kwargs
+
+python -m http.server 44444 -b 192.168.1.110
+
+### deactivate
+### rm -r ./venv
+
+### (venv) root@python:/srv/python/app1# pip --version
+##### pip 9.0.1 from /srv/python/app1/venv/lib/python3.5/site-packages (python 3.5)
+
+ 
+ISSUE:
+Could not fetch URL https://pypi.python.org/simple/flask/: There was a problem confirming the ssl certificate: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed (_ssl.c:728) - skipping
+  
+SOLUTION
+https://stackoverflow.com/questions/25981703/pip-install-fails-with-connection-error-ssl-certificate-verify-failed-certi
+python -m pip install flask --trusted-host=pypi.python.org --trusted-host=pypi.org --trusted-host=files.pythonhosted.org
+
+##################################################
+
+
+
+

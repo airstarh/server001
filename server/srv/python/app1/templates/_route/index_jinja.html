@@ -1,0 +1,18 @@
+{% extends '_base/html_jinja.html' %}
+
+{% block content %}
+{{ super() }}
+<h1>Template!</h1>
+{{ foo | safe }}
+
+<table border="1">
+{% for tr in tbl %}
+    <tr>
+        {% for td in tr %}
+        <td>{{ td }}</td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}

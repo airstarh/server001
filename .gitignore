@@ -1,0 +1,11 @@
+logs/
+database/
+server/var/log/
+.idea/
+.vscode/
+server/srv/php/_backend/alina/vendor/
+server/var/www/borg.home/BorgToolKit/
+server/var/www/zero.home/
+server/var/www/yii2.home/
+server/srv/python/app1/venv/
+server/srv/python/app1/__pycache__/

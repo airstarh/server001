@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{url_for('static', filename='favicon.svg')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Python by Sewa</title>
+    {% endif %}
+    {% endblock %}
+    <link rel="stylesheet" href="{{url_for('static', filename='css/001.css')}}">
+</head>
+
+<body id="alina-real-body" class="alina-main-bg alina-main-txt">
+
+<div>
+    {% block menu %}
+    {% if menu %}
+    {{menu() | safe}}
+    {% else %}
+    {{ app.render_template('_base/menu.html') }}
+    {% endif %}
+    {% endblock %}
+</div>
+
+<div>
+    <h6>region CONTENT</h6>
+    {% block content %}
+    {{content | safe}}
+    {% endblock %}
+    <h6>endregion CONTENT</h6>
+</div>
+
+<div>
+    {% block footer %}
+    {% if footer %}
+    {{footer | safe}}
+    {% endif %}
+    {% endblock %}
+</div>
+
+</body>
+
+</html>
