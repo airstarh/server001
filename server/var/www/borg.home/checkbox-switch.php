@@ -25,7 +25,8 @@
             background: #666666;
             border-radius: 50px;
             position: absolute;
-            right: 0
+            right: 0;
+            transition: 0.4s;
         }
 
         /* SWITCH CIRCLE */
@@ -36,6 +37,7 @@
             border-radius: 50px;
             position: absolute;
             background: #ffffff;
+            transition: 0.4s;
         }
 
         /* UN-CHECKED */
