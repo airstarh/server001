@@ -13,3 +13,7 @@ function zStart() {
     docker compose up -d
     zList
 }
+
+function zSshPhp82(){
+    docker exec -it s2_php /bin/bash
+}
