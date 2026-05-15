@@ -21,8 +21,8 @@ services:
     build: ./docker/nginx
     command: nginx -g "daemon off;"
     ports:
-      - "80:80"
-      - "443:443"
+      - "40080:80"
+      - "40443:443"
     volumes:
       - ./server/etc/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./server/etc/nginx/conf.d:/etc/nginx/conf.d
@@ -59,6 +59,6 @@ services:
     image: mysql:8.0.27
     command: mysqld --sql_mode="IGNORE_SPACE,STRICT_TRANS_TABLES" --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --lower_case_table_names=0
     ports:
-      - "3306:3306"
+      - "43306:3306"
     volumes:
       - ./database/mysql:/var/lib/mysql
